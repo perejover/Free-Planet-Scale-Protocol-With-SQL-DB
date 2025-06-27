@@ -25,12 +25,6 @@ FROM ghcr.io/perejover/ps-http-sim:latest
 CMD ["-listen-port=3900", "-mysql-dbname=YOUR_DBNAME", "-mysql-addr=YOUR_HOSTNAME", "-mysql-port=YOUR_PORT"]
 ```
 
-Example:
-```
-FROM ghcr.io/perejover/ps-http-sim:latest
-CMD ["-listen-port=3900", "-mysql-dbname=db1_rodrelated", "-mysql-addr=iw4pm.h.filess.io", "-mysql-port=3307"]
-```
-
 ## 3. Deploy the Docker Image
 
 You can deploy this Docker image to a free hosting provider, such as [Render](https://render.com/):
@@ -58,17 +52,17 @@ PLANETSCALE_DATABASE_URL="https://username:password@your-app-name.onrender.com"
 
 Suppose your MySQL URI is:
 ```
-mysql://db1_rodrelated:a65d1f80f8595e3bfb513b412f70a30a7214cffc@iw4pm.h.filess.io:3307/db1_rodrelated
+mysql://username:password@example.filess.io:3307/dbname
 ```
 
 And your Render URL is:
 ```
-https://ps-sim-example.onrender.com
+https://hostname.onrender.com
 ```
 
 Your final environment variable would be:
 ```
-PLANETSCALE_DATABASE_URL="https://db1_rodrelated:a65d1f80f8595e3bfb513b412f70a30a7214cffc@ps-sim-example.onrender.com"
+PLANETSCALE_DATABASE_URL="https://username:password@hostname.onrender.com"
 ```
 
 ---
