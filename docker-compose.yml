@@ -1,0 +1,11 @@
+version: "3"
+services:
+planetscale-proxy:
+build:
+context: .
+dockerfile: Dockerfile
+environment:
+
+MYSQL_DBNAME=dbname
+MYSQL_ADDR=hostname
+MYSQL_PORT=port
